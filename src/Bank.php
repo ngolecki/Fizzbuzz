@@ -8,6 +8,10 @@ class Bank
         $this->amount = $sum;
     }
 
+    public function isvalid() {
+        return $this->amount >= 0;
+    }
+
     public function getamount() {
         return $this->amount;
     }
@@ -19,7 +23,12 @@ class Bank
     }
 
     public function withdraw($sum) {
-        $this->amount -= $sum;
+        if ($this->amount >= $sum) {
+            $this->amount -= $sum;
+        } else {
+            $sum = $this->amount;
+            $this->amount -= $sum;
+        }
 
         return $sum;
     }
