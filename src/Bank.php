@@ -23,12 +23,12 @@ class Bank
     }
 
     public function withdraw($sum) {
-        if ($this->amount >= $sum) {
+        #if ($this->amount >= $sum) {
             $this->amount -= $sum;
-        } else {
-            $sum = $this->amount;
-            $this->amount -= $sum;
-        }
+        #} else {
+        #    $sum = $this->amount;
+        #    $this->amount -= $sum;
+        #}
 
         return $sum;
     }
