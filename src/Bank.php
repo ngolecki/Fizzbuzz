@@ -3,7 +3,7 @@ class Bank
 {
     private $amount;
 
-    public function __construct($sum)
+    public function __construct($sum = 0)
     {
         $this->amount = $sum;
     }

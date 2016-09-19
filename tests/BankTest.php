@@ -17,4 +17,19 @@ class BankTest extends PHPUnit_Framework_TestCase
         $a->withdraw(10);
         $this->assertTrue($a->isvalid());
     }
+
+    public function testAddAmount()
+    {
+        $a = new Bank();
+        $a->add(100);
+        $this->assertEquals(100, $a->getamount());
+    }
+
+    public function testWithdrawAmount()
+    {
+        $a = new Bank();
+        $a->add(100);
+        $a->withdraw(50);
+        $this->assertEquals(50, $a->getamount());
+    }
 }
