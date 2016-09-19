@@ -50,7 +50,7 @@
         <exec executable="phploc">
             <arg value="--count-tests" />
             <arg value="--log-csv" />
-            <arg value="${basedir}/build/logs/phploc.csv" />
+            <arg value="build/logs/phploc.csv" />
             <arg path="${basedir}/src" />
         </exec>
     </target>
@@ -60,7 +60,7 @@
             <arg value="--standard=PSR2" />
             <arg value="--ignore=autoload.php" />
             <arg value="--report=checkstyle" />
-            <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
+            <arg value="--report-file=build/logs/checkstyle.xml" />
             <arg value="--standard=${basedir}/build/phpcs_ruleset.xml" />
             <arg path="${basedir}/src" />
         </exec>
@@ -68,7 +68,7 @@
 
     <target name="pdepend" >
         <exec executable="pdepend">
-            <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
+            <arg value="--jdepend-xml=build/logs/jdepend.xml" />
             <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
             <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyradmid.svg" />
             <arg path="${basedir}/src" />

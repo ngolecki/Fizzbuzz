@@ -22,6 +22,9 @@ class Bank
         return $this->amount;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.ElseExpression)
+     **/
     public function withdraw($sum) {
         if ($this->amount >= $sum) {
             $this->amount -= $sum;
